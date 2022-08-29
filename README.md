@@ -40,6 +40,7 @@ repository.You check them there.
 
 The data needed to be preprocessed as it had some special characters and
 contractions(https://en.wikipedia.org/wiki/Wikipedia%3aList_of_English_contractions)
+
 I also used Porter stemmer and WordNetLemmatizer but later decided
 to drop them.
 
@@ -54,14 +55,23 @@ Machine learning algorithm used was XGBoost
 I tried to generate some useful features such as
 a)Difference in lengths of these two questions.
 b)Mean length of the two questions.
+
 c)Common words/min. word length between the questions
+
 d)Common words/max. word length between the questions
+
 e)Common words/min. word length between the questions
+
 f)Common stop word words/min. stopword length between the questions
+
 g)Common stop word words/max. stopword length between the questions
+
 h)Common token word words/min. token length between the questions
+
 i)Common token word words/max. token length between the questions
+
 j)Is last word equal?(boolean)
+
 k)Is first word equal?(boolean)
 
 By applying these common features an accuracy of 77% was reached
@@ -97,9 +107,12 @@ Clone the project
 
 1)Open the duplicate_pairs.py and helper.py on 
 any Integrated development environment(Pycharm recommended)
+
 2)Download the google pretrained word2vec model
 (https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
+
 3)Unzip it into bin and specify the downloaded folder in the py files
+
 4)Run the duplicate_pairs.py and type the command generated on a local browser to work on the streamlit app.
 
 ## Screenshots
@@ -121,6 +134,9 @@ Even though this model has a 80.02% accuracy it has a lot of FALSE POSITIVES
  Some steps that can be taken to further improve the model can be
 
  1)Implemeting stemming or lemmatizing in the preprocessing part.
+ 
  2)Deriving more Ner useful features.
+ 
  3)Using a transformer such as BERT instead of Bag of Words.
+ 
  4)Using a neural network such as LSTM ( Long -short-term memory)and GRU( Gated Recurrent Unit )
